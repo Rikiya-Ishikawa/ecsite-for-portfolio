@@ -1,6 +1,6 @@
-package com.ecsite;
+package com.ecsite.repository;
 
-import com.ecsite.User;
+import com.ecsite.model.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
