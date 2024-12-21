@@ -11,9 +11,9 @@ import org.apache.ibatis.annotations.Update;
 @Mapper
 public interface UserMapper {
 
-    // ユーザーをIDで検索
-    @Select("SELECT id, username, password FROM users WHERE id = #{id}")
-    User findById(Long id);
+    // ユーザーをEmailで検索
+    @Select("SELECT id, username, password FROM users WHERE email = #{email}")
+    User findByEmail(String email);
 
     // ユーザーを挿入
     @Insert("INSERT INTO users (username, password) VALUES (#{username}, #{password})")
