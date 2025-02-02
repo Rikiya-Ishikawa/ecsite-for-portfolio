@@ -4,6 +4,19 @@
     <title>Login</title>
 </head>
 <body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/home">ホーム</a></li>
+            <li><a href="/profile">プロフィール</a></li>
+            <li>
+                <form th:action="@{/logout}" method="post" style="display:inline;">
+                    <button type="submit">ログアウト</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
 <h2>Login</h2>
 <form th:action="@{/login}" method="post">
     <input type="text" name="email" placeholder="Email" required />
