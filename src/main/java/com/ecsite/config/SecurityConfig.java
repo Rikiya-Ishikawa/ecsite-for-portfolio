@@ -20,7 +20,7 @@ public class SecurityConfig {
             )
             .formLogin(form -> form
                 .loginPage("/login")
-                .defaultSuccessUrl("/home", true)
+                .successHandler(new CustomAuthenticationSuccessHandler())
                 .permitAll()
             )
             .logout(logout -> logout
